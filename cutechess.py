@@ -48,7 +48,7 @@ class CutechessMan:
             "-draw movenumber=40 movecount=8 score=10 "
             "-repeat "
             "-recover "
-            "-output format=fastchess "
+            "-output format=cutechess "
             f"-concurrency {self.threads} "
             f"-each tc={self.tc}+{self.inc} "
             f"-openings file=tuner/{self.book} "
