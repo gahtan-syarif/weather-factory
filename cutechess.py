@@ -39,7 +39,7 @@ class CutechessMan:
         params_b: list[str]
     ) -> str:
         return (
-            "./tuner/cutechess-cli "
+            "./tuner/fast-chess "
             f"-engine cmd=./tuner/{self.engine} name={self.engine} proto=uci "
             f"option.Hash={self.hash_size} {' '.join(params_a)} "
             f"-engine cmd=./tuner/{self.engine} name={self.engine} proto=uci "
@@ -48,6 +48,7 @@ class CutechessMan:
             "-draw movenumber=40 movecount=8 score=10 "
             "-repeat "
             "-recover "
+            "-output format=fastchess "
             f"-concurrency {self.threads} "
             f"-each tc={self.tc}+{self.inc} "
             f"-openings file=tuner/{self.book} "
